@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="TestTaskForDTC.Pages.CoinInformationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestTaskForDTC.Pages"
+             
+       xmlns:view="clr-namespace:TestTaskForDTC.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="1200" d:DesignWidth="1400">
+
+    <Border CornerRadius="50"
+            Background="#1b1448"
+            BorderThickness="5"
+            >
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0"/>
+                <GradientStop Color="#8A16C1" Offset="0"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <StackPanel>
+            <local:RootButtons Width="125" HorizontalAlignment="Right"/>
+            <local:SwitcherMenu  Margin="50 30 0 0"/>
+            <view:DetailsCoinInfoView x:Name="DetailsCoinInfoView" Loaded="DetailsCoinInfoView_Loaded"/>
+        </StackPanel>
+    </Border>
+ </UserControl>

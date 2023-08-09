@@ -1,0 +1,30 @@
+﻿<Window x:Class="TestTaskForDTC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="900"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+            <Border CornerRadius="10"
+            Background="#1b1448"
+            Opacity ="0.95"
+            BorderThickness="1">
+
+        <Border.BorderBrush>
+
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0"/>
+                <GradientStop Color="#8A16C1" Offset="0"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+    </Border>
+    
+</Window>

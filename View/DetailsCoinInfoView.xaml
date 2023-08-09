@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="TestTaskForDTC.View.DetailsCoinInfoView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestTaskForDTC.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      >
+
+    <StackPanel Orientation="Horizontal" Margin="55 55 55 55">
+        <StackPanel Orientation="Vertical" Width="100">
+            <Label Content="Id" Width="100" Margin=" 5 5 5 5 " Foreground="White" />
+            <Label Content="Name" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="Symbol" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="Rank" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="PriceUsd" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="Supply" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content=" MarketCapUsd" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content= "VolumeUsd24Hr" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Button Tag="{Binding Path=Id}" Background="#462AD8"  Content="Go to market" Width="100" Margin=" 5 5 5 5 " Foreground="White" Click="OpenMarketLink"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Width="500">
+            <Label Content="{Binding Id}" Width="200" Margin=" 5 5 5 5 " Foreground="White" />
+            <Label Content="{Binding Name}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="{Binding Symbol}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="{Binding Rank}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="{Binding PriceUsd}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="{Binding Supply}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="{Binding MarketCapUsd}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+            <Label Content="{Binding VolumeUsd24Hr}" Width="200" Margin=" 5 5 5 5 " Foreground="White"/>
+
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="TestTaskForDTC.Pages.Main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:pages="clr-namespace:TestTaskForDTC.Pages"
+             xmlns:view="clr-namespace:TestTaskForDTC.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="1200" d:DesignWidth="1400">
+
+    <Border CornerRadius="50"
+            Background="#1b1448"
+            BorderThickness="5">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0"/>
+                <GradientStop Color="#8A16C1" Offset="0"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <StackPanel>
+            <pages:RootButtons  Width="125" HorizontalAlignment="Right"  />
+            <pages:SwitcherMenu Margin="50 30 0 0"/>
+            <TextBox x:Name="SearchTextBox" Foreground="White" IsReadOnly="False" Margin="0 0 50 0" FontSize="32" HorizontalAlignment="Right" Text="Search" Background="#8A16C1" Width="187"></TextBox>
+            <Button  Foreground="White" Background="#462AD8" Content="Find" Margin="0 0 50 0 " FontSize="28" HorizontalAlignment="Right" Width="188" Height="38" Click="Button_Click_Find">
+            </Button>
+            <view:CoinsInfomation x:Name="CoinsInfomationView" Loaded="CoinViewControl_Loaded"/>
+        </StackPanel>
+    </Border>
+</UserControl>
