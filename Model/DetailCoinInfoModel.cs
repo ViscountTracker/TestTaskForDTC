@@ -15,7 +15,6 @@ namespace TestTaskForDTC.Model
     }
     public class DetailCoinInfoModel : INotifyPropertyChanged
     {
-       
         public event PropertyChangedEventHandler PropertyChanged;
 
         private string id;
@@ -115,7 +114,6 @@ namespace TestTaskForDTC.Model
                 NotifyPropertyChanged();
             }
         }
-        
 
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
          {
@@ -137,7 +135,5 @@ namespace TestTaskForDTC.Model
             MarketCapUsd = marketCapUsd;
             VolumeUsd24Hr = volumeUsd24Hr;
         }
-
-       
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -38,6 +39,12 @@ namespace TestTaskForDTC.View
         {
              Switcher.Switch(new CoinInformationPage(((StackPanel)sender).Tag.ToString()));
         }
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cmb = sender as ComboBox;
+            int cmbLimit = Int16.Parse(cmb.SelectedItem.ToString());
+            //MainPage.coinsInfomationViewModel.LoadCoins(cmbLimit);
+            MessageBox.Show($"{cmbLimit}");
+        }
     }
-  
 }

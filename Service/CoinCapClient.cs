@@ -14,8 +14,8 @@ namespace TestTaskForDTC.Service
 {
     public class CoinCapClient
     {
-        public async Task<List<CoinCapInfo>> GetCoinCapList(int limit = 10)
-        {
+        public async Task<List<CoinCapInfo>> GetCoinCapList(int limit = 50)
+          {
             HttpClient httpClient = new HttpClient();
 
             var items = new CoinsCapInfoResponse(); 
@@ -26,10 +26,14 @@ namespace TestTaskForDTC.Service
                 
                 items = JsonConvert.DeserializeObject<CoinsCapInfoResponse>(await response.Content.ReadAsStringAsync());
             }
+            else
+            {
+                Trace.Write($"Error:{response.Content}  Status code: {response.StatusCode}");
+            }
             return items.data;
         }
-
-        public async Task<DetailCoinInfoModel?> getDetailCoin(string CoinId)
+       
+        public async Task<DetailCoinInfoModel?> GetDetailCoin(string CoinId)
         {
             DetailCoinInfoModelResponse? item = null;
             HttpClient httpClient = new HttpClient();
@@ -61,6 +65,5 @@ namespace TestTaskForDTC.Service
             }
             return items.data;
         }
-
     }
 }

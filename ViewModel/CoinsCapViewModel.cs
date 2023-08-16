@@ -13,20 +13,20 @@ namespace TestTaskForDTC.ViewModel
 
     public class CoinsCapViewModel
     {
-        public ObservableCollection<CoinCapInfo> CoinInfo { get; set; }
+        public ObservableCollection<CoinCapInfo> CoinInfo;
 
         public CoinsCapViewModel()
         {
             LoadCoins();
         }
 
-        private async void LoadCoins()
+        public async void LoadCoins(int cmbLimit = 10)
         {   
-            CoinInfo = new ObservableCollection<CoinCapInfo>();
+                CoinInfo = new ObservableCollection<CoinCapInfo>();
             List<CoinCapInfo> res = await Task.Run(async () =>
             {
                 CoinCapClient client = new CoinCapClient();
-                return await client.GetCoinCapList();
+                return await client.GetCoinCapList(cmbLimit);
             });
             foreach (CoinCapInfo coinCap in res)
             {

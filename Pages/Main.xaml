@@ -19,12 +19,11 @@
             </LinearGradientBrush>
         </Border.BorderBrush>
         <StackPanel>
-            <pages:RootButtons  Width="125" HorizontalAlignment="Right"  />
+            <pages:RootButtons  Width="125" HorizontalAlignment="Right"/>
             <pages:SwitcherMenu Margin="50 30 0 0"/>
             <TextBox x:Name="SearchTextBox" Foreground="White" IsReadOnly="False" Margin="0 0 50 0" FontSize="32" HorizontalAlignment="Right" Text="Search" Background="#8A16C1" Width="187"></TextBox>
-            <Button  Foreground="White" Background="#462AD8" Content="Find" Margin="0 0 50 0 " FontSize="28" HorizontalAlignment="Right" Width="188" Height="38" Click="Button_Click_Find">
-            </Button>
-            <view:CoinsInfomation x:Name="CoinsInfomationView" Loaded="CoinViewControl_Loaded"/>
+            <Button  Foreground="White" Background="#462AD8" Content="Find" Margin="0 0 50 0 " FontSize="28" HorizontalAlignment="Right" Width="188" Height="38" Click="Button_Click_Find"/>
+            <view:CoinsInfomation x:Name="CoinsInfomationView" Loaded="CoinViewControl_Loaded" Margin="0 -50 0 0"/>
         </StackPanel>
     </Border>
 </UserControl>

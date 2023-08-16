@@ -18,7 +18,7 @@
             <Label Content="Supply" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
             <Label Content=" MarketCapUsd" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
             <Label Content= "VolumeUsd24Hr" Width="100" Margin=" 5 5 5 5 " Foreground="White"/>
-            <Button Tag="{Binding Path=Id}" Background="#462AD8"  Content="Go to market" Width="100" Margin=" 5 5 5 5 " Foreground="White" Click="OpenMarketLink"/>
+            <Button Tag="{Binding Path=Id}" Background="#462AD8"  Content="Go to market" Width="100" Margin=" 5 5 5 5 " Foreground="White" Click="OpenMarketLink" BorderThickness="1"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" Width="500">
             <Label Content="{Binding Id}" Width="200" Margin=" 5 5 5 5 " Foreground="White" />

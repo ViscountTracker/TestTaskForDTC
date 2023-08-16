@@ -28,7 +28,7 @@ namespace TestTaskForDTC.ViewModel
             var localDetailCoinInfo = await Task.Run(async () =>
             {
                 CoinCapClient client = new CoinCapClient();
-                return await client.getDetailCoin(CoinId);
+                return await client.GetDetailCoin(CoinId);
             });
             DetailCoinInfo.Id = localDetailCoinInfo?.Id;
             DetailCoinInfo.Name= localDetailCoinInfo?.Name; 

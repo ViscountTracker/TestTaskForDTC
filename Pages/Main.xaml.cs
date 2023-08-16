@@ -47,5 +47,6 @@ namespace TestTaskForDTC.Pages
             });
             coinsInfomationViewModel.FillObservableListWithCoins(result);
         }
+        
     }
 }
