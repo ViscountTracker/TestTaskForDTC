@@ -25,7 +25,7 @@ namespace TestTaskForDTC.Pages
     /// </summary>
     public partial class Main : UserControl
     {
-        private CoinsCapViewModel coinsInfomationViewModel;
+        public static CoinsCapViewModel coinsInfomationViewModel;
         public  Main()
         {
             InitializeComponent();

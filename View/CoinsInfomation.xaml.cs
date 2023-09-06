@@ -25,8 +25,6 @@ namespace TestTaskForDTC.View
     /// <summary>
     /// Interaction logic for CoinsInfomation.xaml
     /// </summary>
-    /// Как передать данные на пайдж динамически.
-    /// 
     public partial class CoinsInfomation : UserControl
     {
         private object moreInfoStackPanel;
@@ -40,10 +38,10 @@ namespace TestTaskForDTC.View
              Switcher.Switch(new CoinInformationPage(((StackPanel)sender).Tag.ToString()));
         }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        {//TODO: Fix logic error in this path of code 
             ComboBox cmb = sender as ComboBox;
             int cmbLimit = Int16.Parse(cmb.SelectedItem.ToString());
-            //MainPage.coinsInfomationViewModel.LoadCoins(cmbLimit);
+            Main.coinsInfomationViewModel.LoadCoins(cmbLimit);
             MessageBox.Show($"{cmbLimit}");
         }
     }

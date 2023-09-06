@@ -13,20 +13,21 @@ namespace TestTaskForDTC.ViewModel
 
     public class CoinsCapViewModel
     {
-        public ObservableCollection<CoinCapInfo> CoinInfo;
+        public ObservableCollection<CoinCapInfo> CoinInfo { get; set; }
 
         public CoinsCapViewModel()
         {
+            CoinInfo = new ObservableCollection<CoinCapInfo>();
+
             LoadCoins();
         }
 
-        public async void LoadCoins(int cmbLimit = 10)
+        public async void LoadCoins(int limit = 10)
         {   
-                CoinInfo = new ObservableCollection<CoinCapInfo>();
-            List<CoinCapInfo> res = await Task.Run(async () =>
+             List<CoinCapInfo> res = await Task.Run(async () =>
             {
                 CoinCapClient client = new CoinCapClient();
-                return await client.GetCoinCapList(cmbLimit);
+                return await client.GetCoinCapList(limit);
             });
             foreach (CoinCapInfo coinCap in res)
             {
@@ -42,6 +43,5 @@ namespace TestTaskForDTC.ViewModel
                 CoinInfo.Add(coinCap);
             }
         }
-
     }
 }

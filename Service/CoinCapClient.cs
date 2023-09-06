@@ -14,7 +14,7 @@ namespace TestTaskForDTC.Service
 {
     public class CoinCapClient
     {
-        public async Task<List<CoinCapInfo>> GetCoinCapList(int limit = 50)
+        public async Task<List<CoinCapInfo>> GetCoinCapList(int limit = 10)
           {
             HttpClient httpClient = new HttpClient();
 

@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:sys="clr-namespace:System;assembly=mscorlib"
       xmlns:local="clr-namespace:TestTaskForDTC.View"
-       xmlns:data="clr-namespace:TestTaskForDTC.Model"
-             xmlns:pages="clr-namespace:TestTaskForDTC.Pages"
+      xmlns:data="clr-namespace:TestTaskForDTC.Model"
+      xmlns:pages="clr-namespace:TestTaskForDTC.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="550" d:DesignWidth="800" Margin="55, 55, 55, 55" >
     <UserControl.Resources>
@@ -23,12 +23,18 @@
         </DataTemplate>
     </UserControl.Resources>
     <StackPanel Orientation="Vertical" Background="Transparent" >
-        <ComboBox SelectionChanged="ComboBox_SelectionChanged" Height="30" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10 10 10 10">
+        <ComboBox SelectionChanged="ComboBox_SelectionChanged" 
+                  Height="30" Width="50"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left" 
+                  Margin="10 10 10 10" 
+                  Foreground="AntiqueWhite" 
+                  BorderThickness="1" >
             <sys:Int16>10</sys:Int16>
             <sys:Int16>25</sys:Int16>
             <sys:Int16>50</sys:Int16>
         </ComboBox>
-        <ScrollViewer Height="450">
+        <ScrollViewer Height="450" >
             <!-- TODO:Designe-->
             <ListBox BorderThickness="0" Background="Transparent"  ItemsSource="{Binding CoinInfo}"/>
         </ScrollViewer>
